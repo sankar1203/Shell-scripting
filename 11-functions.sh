@@ -10,6 +10,7 @@ else
     echo "you are running with root access"
 fi
 
+# Validation function takes input as exit status and what command they tried to install
 VALIDATE (){
     if [ $1 -eq 0 ]
     then
