@@ -10,8 +10,7 @@ else
     echo "you are running with root access"
 fi
 
-VALIDATE ()
-{
+VALIDATE (){
     if [ $1 -eq 0 ]
     then
         echo "Installing $2 is.. success ..."
@@ -28,8 +27,7 @@ then
     dnf install mysql -y
     VALIDATE $? "MYSQL"
 else
-    echo "MySQL is already installed... nothing to do"
-    exit 1
+    echo "MySQL is already installed... nothing to do" 
 fi
 
 dnf list installed python3
@@ -40,7 +38,6 @@ then
     VALIDATE $? "python3"
 else
     echo "python3 is already installed... nothing to do"
-    exit 1
 fi
 
 dnf list installed nginx
@@ -51,5 +48,4 @@ then
     VALIDATE $? "nginx"
 else
     echo "nginx is already installed... nothing to do"
-    exit 1
 fi
