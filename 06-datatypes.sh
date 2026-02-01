@@ -1,6 +1,7 @@
 #!/bin/bash
 
-Number1=100
+#Number1=100
+Number1=siva
 Number2=200
 
 Timestamp=$(date)
