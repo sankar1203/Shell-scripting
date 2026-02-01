@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This is arguments
+
 Person1=$1
 Person2=$2
 echo "$Person1:Hi $Person2 This is $Person1"
