@@ -6,6 +6,7 @@ Number=$1
 # -gt -->greater than
 # -eq --> equal
 # -ne -->not equal
+# space required for expression in if condition
 
 if [ $Number -lt 5 ]
 then
