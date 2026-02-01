@@ -1,3 +1,5 @@
+#!/bin/bash
+
 Person1=$1
 Person2=$2
 echo "$Person1:Hi trump This is a siva"
