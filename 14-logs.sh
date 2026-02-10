@@ -15,7 +15,7 @@ LOG_FILE= "$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 echo "Script Started executing at: $date" | tee -a $LOG_FILE
 
-if [ $USERID -ne 0 ] | tee -a $LOG_FILE
+if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR: Please run this script with root access" | tee -a $LOG_FILE
     exit 1   #give  otherthan 0 upto 127
