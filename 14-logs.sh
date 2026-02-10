@@ -9,10 +9,11 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 LOGS_FOLDER=/var/log/shellscript-logs
+echo " Logs Folder is : $LOGS_FOLDER"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+echo " Script name is: $SCRIPT_NAME "
 LOG_FILE= "$LOGS_FOLDER/$SCRIPT_NAME.log"
-
-echo "$LOG_FILE"
+echo " Log File IS: $LOG_FILE "
 
 mkdir -p $LOGS_FOLDER
 echo "Script Started executing at: $(date)" | tee -a $LOG_FILE
