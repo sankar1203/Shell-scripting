@@ -65,3 +65,13 @@ then
 else
     echo -e "$Y nginx is already installed... nothing to do $N" | tee -a $LOG_FILE
 fi
+
+dnf list installed httpd &>>$LOG_FILE
+if [ $? -ne 0 ]
+then
+    echo "httpd is not installed ... Going to install on it" | tee -a $LOG_FILE
+    dnf install httpd -y &>>$LOG_FILE
+    VALIDATE $? "httpd"
+else
+    echo -e "$Y httpd is already installed... nothing to do $N" | tee -a $LOG_FILE
+fi
