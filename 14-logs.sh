@@ -12,8 +12,10 @@ LOGS_FOLDER=/var/log/shellscript-logs
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE= "$LOGS_FOLDER/$SCRIPT_NAME.log"
 
+echo "$LOG_FILE"
+
 mkdir -p $LOGS_FOLDER
-echo "Script Started executing at: $date" | tee -a $LOG_FILE
+echo "Script Started executing at: $(date)" | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ]
 then
